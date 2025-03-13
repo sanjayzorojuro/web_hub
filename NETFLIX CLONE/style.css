@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(img/background.jpg.jpg);
+    height: 80vh;
+    position: relative;
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+
+}
+
+.main .layer {
+    height: 80vh;
+    width: 100%;
+    opacity: 0.44;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+.main nav {
+    padding: 10px;
+    max-width: 60vw;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+
+}
+
+.main nav img {
+
+    position: relative;
+    z-index: 10;
+}
+
+.main nav .language {
+    height: 30px;
+    width: auto;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    position: relative;
+    z-index: 10;
+    color: white;
+
+}
+
+.main nav .signin {
+    height: 30px;
+    width: auto;
+    background-color: rgb(229, 9, 20);
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    color: white;
+    position: relative;
+    z-index: 10;
+
+}
+
+.main .content {
+    color: white;
+    margin: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    position: relative;
+    border: transparent;
+    gap: 35px;
+    text-align: center;
+
+}
+
+.first {
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.main .content :nth-child(2) {
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.main .content :nth-child(3) {
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    gap: 10px;
+
+}
+
+.hello input {
+    padding: 10px;
+    width: 345px;
+    font-size: 1.5rem;
+    border-radius: 0.25rem;
+    background-color: rgba(23, 23, 23, 0.3);
+    color: white;
+}
+
+.hello button {
+    padding: 10px;
+    width: 200px;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 0.25rem;
+
+
+}
+
+.line {
+    height: 1vh;
+    background-color: rgb(161, 153, 153);
+}
+
+.firstmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 160px;
+    gap: 150px;
+    position: relative;
+    background-position: center center;
+
+}
+
+.content2 {
+    color: white;
+    align-items: left;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 3px;
+    padding: 20px 0;
+}
+
+.firstmain button {
+    border: 2px solid grey;
+
+}
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+.line2 {
+    height: 1vh;
+    background-color: rgb(161, 153, 153);
+}
+
+.secondmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 160px;
+    gap: 170px;
+    position: relative;
+    background-position: center center;
+}
+
+.secondmain .content3 {
+    color: white;
+    align-items: left;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 3px;
+    padding: 20px 0;
+}
+
+.secondmain button {
+    border: 2px solid grey;
+}
+
+.thirdmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 160px;
+    gap: 170px;
+    position: relative;
+    background-position: center center;
+
+}
+
+.thirdmain .content4 {
+    color: white;
+    align-items: left;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 3px;
+    padding: 20px 0;
+
+}
+
+.thirdmain button {
+    border: 2px solid grey;
+}
+
+.fourthmain {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+    gap: 25px;
+    position: relative;
+    background-position: center center;
+    flex-direction: column;
+}
+
+.fourthmain .questions {
+    border: 2px solid rgb(0, 0, 0);
+    height: 6%;
+    width: 55%;
+    background-color: #80808046;
+    text-align: center;
+    padding: 19px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 3px;
+}
+
+.fourthmain .footer {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.questions:hover {
+    cursor: pointer;
+    background-color: #414141;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 75px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    max-width: 60vw;
+    margin: auto;
+
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 14px;
+}
+
+footer span {
+    margin: 2px 17vw;
+    color: white;
+    padding: 5px 0px;
+}
+
+.footer a {
+    color: white;
+}
+
+footer {
+    padding: 50px;
+}
+
+@media screen and (max-width:1070px) {
+    .firstmain {
+        flex-wrap: wrap;
+        font-size:10px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .secondmain {
+        flex-wrap: wrap;
+        font-size:10px;
+    }
+
+    .thirdmain {
+        flex-wrap: wrap;
+        font-size:10px;
+
+    }
+
+    .content .first {
+        font-size: 15px;
+    }
+
+    .content .second {
+        font-size: 10px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+    footer span{
+        padding: 1px 0;
+    }
+    .firstmain .image2{
+        width: 50px;
+        padding: 0;
+        margin: 0;
+    }
+}

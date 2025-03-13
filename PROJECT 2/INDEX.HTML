@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --main: rgba(130, 65, 214, 0.699);
+            --text:#0d53d4;
+            --shadow:rgba(174, 119, 245, 0.699);
+
+            
+        }
+
+        div {
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0px;
+            background-color: rgba(130, 65, 214, 0.699);
+            z-index: 1000%;
+
+        }
+
+        span {
+            padding: 90px;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        body{
+            background-color: bisque;
+        }
+
+
+
+        .parent {
+            height: 800px;
+            width: 1850px;
+            display: flex;
+            position: relative;
+            top: 5px;
+            left: 25px;
+            background-color: var(--main);
+            box-shadow:15px 15px 5px var(--shadow); 
+        }
+
+        .first {
+            height: 704px;
+            width: 703px;
+
+            position: relative;
+            top: 33px;
+            left: 109px;
+            background-color: black;
+        }
+
+        .second {
+            height: 704px;
+            width: 701px;
+
+            position: relative;
+            top: 33px;
+            left: 233px;
+            background-color: black;
+        }
+
+        .nav a
+         {
+            text-decoration: null;
+        }
+        .greetings{
+            padding: 50px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 2%;
+            margin:20px;
+            width: 1045px;
+            position:relative;
+            left: 300px;
+            background-color: var(--main);
+            color:var(--text);
+            box-shadow: 15px 15px 5px rgba(174, 119, 245, 0.699);
+        }
+        FOOTER{
+            border: 2PX SOLID black;
+            padding: 25px;
+            margin: 25px;
+            text-align: center;
+            background-color: var(--main);
+            columns: var(--text);
+        }
+         div .uinque{
+            border: 2px solid black;
+            position: fixed;
+            top: 15px;
+            width: 12px;
+            border-radius: 100%;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <span> <a href="/">home</a> </span>
+        <span> <a href="/">about us</a> </span>
+        <span> <a href="/">search</a> </span>
+        <span>SUNJIROLL</span>
+
+    </div>
+    <br>
+
+    <div class="parent">
+        <div class="first">
+            <img src="p1.jpeg" height="700" alt="">
+        </div>
+        <div class="second">
+            <img src="p2.jpeg" alt="" height="700" width="700px">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="greetings">
+        <h1>welcome to the best amine website</h1>
+    </div>
+    <div class="unique">
+        &lt;:&gt;
+    </div>
+ <footer>
+    THANK YOU 
+ </footer>
+</body>
+</html>
