@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator
+    </title>
+
+    <style>
+        .container {
+            height: 453px;
+            width: 444px;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 43px;
+            padding: 10px;
+            background-color: rgb(90 90 90 / 89%);
+        }
+
+        .row {
+            border: 2px solid black;
+            display: flex;
+            gap: 54px;
+            height: 32px;
+            width: 418px;
+            border-radius: 1em;
+            padding: 10px;
+            background-color: rgb(255 255 255 / 73%)
+        }
+
+        .box {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1em;
+            width: 51px;
+            height: 23px;
+            padding: 5px;
+            background-color: rgba(179, 179, 179, 0.89);
+        }
+
+        .container .row .box button {
+            width: 51px;
+            height: 100%;
+            border-radius: 1em;
+            font-size: 16px;
+            background-color: rgba(179, 179, 179, 0.89);
+        }
+
+        .row input {
+            width: 278px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .container:nth-child(1) button {
+            width: 66px;
+            border-radius: 1em;
+            background-color: rgba(179, 179, 179, 0.89);
+        }
+
+        .container .row button:hover {
+            background-color: rgb(96 96 96 / 73%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <input type="text"  id="res" >
+            <button onclick="clr()">C</button>
+        </div>
+        <div class="row">
+            <div class="box">
+                <button value="7" onclick="display(7)">7</button>
+            </div>
+            <div class="box">
+                <button value="8" onclick="display(8)">8</button>
+            </div>
+            <div class="box">
+                <button value="9" onclick="display(9)">9</button>
+            </div>
+            <div class="box">
+                <button value="/" onclick="div()">/</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <button value="4" onclick="display(4)">4</button>
+            </div>
+            <div class="box">
+                <button value="5" onclick="display(5)">5</button>
+            </div>
+            <div class="box">
+                <button value="6" onclick="display(6)">6</button>
+            </div>
+            <div class="box"><button value="*" onclick="mul()">*</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <button value="1" onclick="display(1)">1</button>
+            </div>
+            <div class="box">
+                <button value="2" onclick="display(2)">2</button>
+            </div>
+            <div class="box">
+                <button value="3" onclick="display(3)">3</button>
+            </div>
+            <div class="box">
+                <button value="-" onclick="min()">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <button value="0" onclick="display(0)">0</button>
+            </div>
+            <div class="box">
+                <button value="." onclick="dot()" id="dot">.</button>
+            </div>
+            <div class="box">
+                <button value="+" onclick="plus()">+</button>
+            </div>
+            <div class="box">
+                <button value="" onclick="calculate()" >=</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function dot() {
+            display('.')
+            document.getElementById("dot").disabled = true
+            
+        }
+        function clr() {
+            document.getElementById("res").value = "";
+            document.getElementById("dot").disabled = false;
+
+        }
+        function display(value) {
+            document.getElementById("res").value += value;
+
+
+        }
+        function calculate() {
+            var p = document.getElementById("res").value;
+            var q = eval(p);
+            if (q == "Infinity") {
+                document.getElementById("res").value = "cannot divide by zero";
+
+            }
+            else {
+                document.getElementById("res").value = q;
+            }
+        }
+        function plus() {
+            display('+')
+            document.getElementById("dot").disabled = false;
+        }
+        function min() {
+            display('-')
+            document.getElementById("dot").disabled = false;
+        }
+        function mul() {
+            display('*')
+            document.getElementById("dot").disabled = false;
+        }
+        function div() {
+            display('/')
+            document.getElementById("dot").disabled = false;
+        }
+    </script>
+</body>
+
+</html>
