@@ -74,7 +74,7 @@
     <div class="container">
 
         <div class="row">
-            <input type="text"  id="res" >
+            <input type="text" id="res">
             <button onclick="clr()">C</button>
         </div>
         <div class="row">
@@ -101,7 +101,8 @@
             <div class="box">
                 <button value="6" onclick="display(6)">6</button>
             </div>
-            <div class="box"><button value="*" onclick="mul()">*</button>
+            <div class="box">
+                <button value="*" onclick="mul()">*</button>
             </div>
         </div>
         <div class="row">
@@ -129,7 +130,7 @@
                 <button value="+" onclick="plus()">+</button>
             </div>
             <div class="box">
-                <button value="" onclick="calculate()" >=</button>
+                <button value="" onclick="calculate()">=</button>
             </div>
         </div>
     </div>
@@ -139,7 +140,7 @@
         function dot() {
             display('.')
             document.getElementById("dot").disabled = true
-            
+
         }
         function clr() {
             document.getElementById("res").value = "";
