@@ -47,3 +47,8 @@ p4.then((a)=>{
     console.log(err)
     
 })
+
+
+// promises are we are saying that the code will executes we are making a promise for a code execution 
+// the prommise may be resolve or reject but it always executes 
+// we can use set interval and set timeout to give delay or repeat the process
