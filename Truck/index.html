@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Moving Truck</title>
+    <style>
+        body {
+
+            background-color: #009688;
+
+            border-left: 350px solid WHITE;
+        }
+
+        .line {
+            position: absolute;
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            border-bottom: 2px solid WHITE;
+        }
+
+        .mountain {
+            position: absolute;
+            right: -900px;
+            bottom: -20px;
+            width: 2px;
+            height: 3px;
+            box-shadow:
+                250px 250px 0 50px #4DB6AC,
+                290px 320px 0 50px #4DB6AC,
+                320px 400px 0 50px #4DB6AC;
+            transform: rotate(130deg);
+        }
+
+        .hill {
+            position: absolute;
+            bottom: -50px;
+            width: 600px;
+            border-radius: 50%;
+            height: 25px;
+            box-shadow:
+                100px 0 0 10px #4DB6AC,
+                100px 0 0 50px #4DB6AC;
+        }
+
+        .tree {
+            height: 100px;
+            bottom: 0;
+            width: 85px;
+            right: 10%;
+            position: absolute;
+            background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg") no-repeat;
+        }
+
+        .truck,
+        .wheels {
+            width: 85px;
+            margin-right: -60px;
+            bottom: 0px;
+            right: 50%;
+            position: absolute;
+            background-color: #000;
+        }
+
+        .truck {
+            background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg") no-repeat;
+            background-size: contain;
+            height: 60px;
+        }
+
+        .truck::before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            box-shadow:
+                -30px 28px 0 1.5px #fff,
+                -35px 18px 0 1.5px #fff
+        }
+
+        .wheels {
+            background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg") no-repeat;
+            background-size: contain;
+            height: 15px;
+            margin-bottom: 0;
+        }
+
+        .tree {
+            animation: tree 10s linear infinite;
+        }
+
+        .hill {
+            animation: hill 10s linear infinite;
+        }
+
+        .mountain {
+            animation: mtn 10s linear infinite;
+        }
+
+        .truck {
+            animation: truck 10s linear infinite;
+        }
+
+        .wheels {
+            animation: truck 10s linear infinite;
+        }
+
+        .truck::before {
+            animation: wind 1.5s linear infinite;
+        }
+
+        @keyframes tree {
+            100% {
+                transform: translateX(-1650px);
+            }
+        }
+
+        @keyframes wind {
+            50% {
+                transform: translateY(3px);
+            }
+        }
+
+        @keyframes mtn {
+            100% {
+                transform: translateX(-1000px) rotate(130deg);
+            }
+        }
+
+        @keyframes hill {
+            100% {
+                transform: translateX(-650px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="line">
+        <div class="mountain"></div>
+        <div class="hill"></div>
+        <div class="tree"></div>
+        <div class="truck"></div>
+        <div class="wheels"></div>
+    </div>
+</body>
+
+</html>
