@@ -1,0 +1,56 @@
+<html>
+
+<body>
+    <input type="color" id="colorPicker">
+    <input type="number" id="thicknessInput" min="1" max="100" value="5">
+    <button onclick="clearCanvas()">Clear</button><br>
+    <canvas id="canvas" width="700" height="500" style="border:1px solid black;"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        let isDrawing = false;
+        let color = 'black';
+        let thickness = 5;
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        document.getElementById('colorPicker').addEventListener('input', function () {
+            color = this.value;
+        });
+
+        document.getElementById('thicknessInput').addEventListener('input', function () {
+            thickness = this.value;
+        });
+
+        function startDrawing(c) {
+            isDrawing = true;
+            draw(c);
+        }
+        function stopDrawing() {
+            isDrawing = false;
+            context.beginPath();
+        }
+        function draw(c) {
+            if (!isDrawing) return;
+            context.lineWidth = thickness;
+            context.lineCap = 'round';
+            context.strokeStyle = color;
+            context.lineTo(c.offsetX, c.offsetY);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(c.offsetX, c.offsetY);
+        }
+        function clearCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+
+    </script>
+
+</body>
+
+
+</html>
