@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background-color: royalblue;
+        }
+
+        .cards {
+            margin-top: 20%;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card {
+            position: relative;
+        }
+
+        .thumbnailimg {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid aqua;
+        }
+
+        .cardimg {
+            position: absolute;
+            right: -130px;
+            bottom: 80px;
+        }
+
+        .cardimg img {
+            width: 300px;
+            height: 350px;
+            border-radius: 20px;
+            border: 2px solid white;
+        }
+
+        .card:hover .cardimg {
+            z-index: 1;
+
+        }
+
+        .description p {
+            color: blue;
+        }
+
+        .card:hover .description {
+            display: block;
+            z-index: 2;
+            opacity:1;
+        }
+
+        .cardimg::after,
+        .description::after {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-color: white;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            z-index: 0;
+            transform: rotate(45deg);
+        }
+
+
+        .description {
+            position: absolute;
+            padding: 10px;
+            width: 280px;
+            right: -120px;
+            bottom: 70px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid aqua;
+            opacity: 1;
+            display: none;
+            transition: opacity 2s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="cards">
+        <div class="card">
+            <div class="cardimg">
+                <img src="virupaksha.jpg">
+            </div>
+            <div class="description">
+                <h3>Virupaksha Temple</h3>
+                <p>Hampi</p>
+            </div>
+            <img src="virupaksha.jpg" class="thumbnailimg">
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img src="Tajmahal.jpg">
+            </div>
+            <div class="description">
+                <h3>Tajmahal</h3>
+                <p>Agra || UttaraPradesh</p>
+            </div>
+            <img src="Tajmahal.jpg" class="thumbnailimg">
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img src="dal-lake.jpg">
+            </div>
+            <div class="description">
+                <h3>dal-lake</h3>
+                <p>located at srinagar</p>
+            </div>
+            <img src="dal-lake.jpg" class="thumbnailimg">
+        </div>
+
+
+        <div class="card">
+            <div class="cardimg">
+                <img src="tawang.jpg">
+            </div>
+            <div class="description">
+                <h3>dal-lake</h3>
+                <p>located at srinagar</p>
+            </div>
+            <img src="tawang.jpg" class="thumbnailimg">
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img src="dal-lake.jpg">
+            </div>
+            <div class="description">
+                <h3>dal-lake</h3>
+                <p>located at srinagar</p>
+            </div>
+            <img src="dal-lake.jpg" class="thumbnailimg">
+        </div>
+    </div>
+
+</body>
+
+</html>
