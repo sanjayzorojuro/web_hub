@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background: linear-gradient(rgb(255, 227, 227), rgb(79, 199, 255));
+            height: 100%;
+        }
+
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            width: 347px;
+            position: absolute;
+            left: 430px;
+            top: 144px;
+            height: 255px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            border-radius: 1em;
+            background: linear-gradient(rgb(248, 214, 255), rgb(0, 60, 255));
+            color: white;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            text-align: left;
+            padding: 4px;
+        }
+        .box button {
+            padding: 10px;
+            width: 82px;
+            margin: 0px;
+            position: absolute;
+            /* left: 14px; */
+            top: 218px;
+            border-radius: 1em;
+            background-color: transparent;
+            color: white;
+        }
+        .box input {
+            border: indigo;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+            color: white;
+        }
+        .box button:hover {
+            background-color: rgb(177, 236, 166);
+            box-shadow: 0 0 5px rgb(46, 255, 64),
+                0 0 25px rgb(20, 220, 255),
+                0 0 50px rgb(255, 5, 5),
+                0 0 100px rgb(255, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <form action="">
+            <div class="box">
+                <span>user-name</span>
+                <input type="text">
+            </div>
+            <div class="box">
+                <span>Password</span>
+                <input type="password">
+            </div>
+            <div class="box">
+                <button>Submit
+                </button>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
+
+
+
+/* .container .box input:focus-span,.conatiner .box input:valid-span{
+    top:25px;
+    left: 0;
+ } */
+     
+ 
