@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration form</title>
+</head>
+<style>
+    .box {
+        background: lightgrey;
+        width: 42%;
+        height: 100%;
+        margin-left: 30%;
+        padding: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        color: greenyellow;
+    }
+
+    .btn:hover {
+        background: blue;
+        color: white;
+    }
+
+    input {
+        background: white;
+        width: 500px;
+        border-radius: 3px;
+    }
+
+    .btn {
+        width: auto;
+        height: auto;
+        background: greenyellow;
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>Registration form</h1>
+    <div class="box">
+        <form>
+            <span>Full Name</span><br>
+            <input type="text" placeholder="Enter your name" required>
+            <br><br>
+
+            <span>Password</span><br>
+            <input type="password" placeholder="Enter your Password" required id="p">
+            <br><br>
+
+            <span>Confirm Password</span><br>
+            <input type="password" placeholder="Confirm Password" required>
+            <br><br>
+
+            <span>Enter Mobile Number</span><br>
+            <input type="tel" placeholder="Enter your Mobile Number" required>
+            <br><br>
+
+            <span>Skill Range</span><br>
+            <input type="range" required>
+            <br><br>
+
+            <span>Email</span><br>
+            <input type="email" placeholder="Enter your Email id">
+            <br><br>
+
+            <span>Profile URL</span><br>
+            <input type="url" placeholder="Enter your profile URL">
+            <br><br>
+
+            <span>Resume</span><br>
+            <input type="file" placeholder="Upload your Resume">
+            <br><br>
+
+            <input type="submit" value="SUBMIT" class="btn">
+            <input type="reset" value="RESET" class="btn">
+        </form>
+
+    </div>
+</body>
+
+</html>
